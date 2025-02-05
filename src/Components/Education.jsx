@@ -21,16 +21,7 @@ const educationData = [
     Completed Master of Business Administration(MBA) from Kabi Najrul Govt College (Under Dhaka University) "An advanced degree focusing on leadership, strategy, and business operations in a global context."
     `,
   },
-  {
-    id: 3,
-    institution: "Programming Hero",
-    certificate: "Certificate Of Web Development",
-    role: "Student",
-    duration: "jun 2024 - Running",
-    description: `
-     Completed Frontend Web Development Course from Programming Hero "A comprehensive program covering key areas of web development, such as HTML, CSS, JavaScript, React, and Node."
-    `,
-  },
+ 
 ];
 
 const Education = () => {

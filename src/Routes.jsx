@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 
 import NavContact from "./Components/NavContact";
 import NavAbout from "./Components/NavAbout";
+import NavSkills from "./Components/NavSkills";
 
 
 
@@ -25,7 +26,11 @@ import NavAbout from "./Components/NavAbout";
         {
             path:'/contact',
             element: <NavContact></NavContact>
-        }
+        },
+        {
+            path:'/skills',
+            element: <NavSkills></NavSkills>
+        },
       ]
     },
   ]);

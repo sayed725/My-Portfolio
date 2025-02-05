@@ -1,8 +1,8 @@
 import React from "react";
 
-const Skills = () => {
+const NavSkills = () => {
   return (
-    <div className="py-10">
+    <div className="py-10 mt-10 min-h-screen">
       <div className="px-4 lg:px-0">
         <h2 className="text-5xl font-extrabold text-gray-900 mb-8">
           Skills<span className="text-purple-600">.</span>
@@ -56,4 +56,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default NavSkills;
