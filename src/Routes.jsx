@@ -7,6 +7,10 @@ import NavContact from "./Components/NavContact";
 import NavAbout from "./Components/NavAbout";
 import NavSkills from "./Components/NavSkills";
 import NavProjects from "./Components/NavProjects";
+import MovieLifyDetails from "./Pages/MovieLifyDetails";
+import PostPadDetails from "./Pages/PostPadDetails";
+import GreenDetails from "./Pages/GreenDetails";
+import BiteBankDetails from "./Pages/BiteBankDetails";
 
 
 
@@ -35,6 +39,22 @@ import NavProjects from "./Components/NavProjects";
         {
             path:'/projects',
             element: <NavProjects></NavProjects>
+        },
+        {
+            path:'/movielify-details',
+            element: <MovieLifyDetails></MovieLifyDetails>
+        },
+        {
+            path:'/postpad-details',
+            element: <PostPadDetails></PostPadDetails>
+        },
+        {
+            path:'/green-details',
+            element: <GreenDetails></GreenDetails>
+        },
+        {
+            path:'/bitebank-details',
+            element: <BiteBankDetails></BiteBankDetails>
         },
       ]
     },

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <section className="py-16" id="1234">
+    <section className="py-10" id="1234">
       <div className="px-4 lg:px-0">
         {/* Section Title */}
         <h2 className="text-5xl font-extrabold text-gray-900 mb-12">
@@ -54,7 +54,7 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <Link className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
+                  <Link to={'/movielify-details'} className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
                     Details
                   </Link>
                 </div>
@@ -74,17 +74,17 @@ const Projects = () => {
             {/* Project Image */}
             <div className="relative flex justify-center">
               <img
-                src="/green-edventure1.jpeg"
+                src="/Postpad-Home.png"
                 alt="Project"
                 className="w-1/2 object-contain h-64 rounded-3xl hover:scale-[1.05] transition-all"
               />
               <img
-                src="/green-edventure2.jpeg"
+                src="/postPad-post-details.png"
                 alt="Project"
                 className="w-1/2 object-contain h-64 rounded-3xl hover:scale-[1.05] transition-all"
               />
               <img
-                src="/green-edventure3.jpeg"
+                src="/PostPad-admin-home.png"
                 alt="Project"
                 className="w-1/2 object-contain h-64 rounded-3xl hover:scale-[1.05] transition-all"
               />
@@ -118,7 +118,7 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <Link className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
+                  <Link to={'/postpad-details'} className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
                     Details
                   </Link>
                 </div>
@@ -181,7 +181,7 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <Link className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
+                  <Link to={'/bitebank-details'} className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
                     Details
                   </Link>
                 </div>
@@ -233,7 +233,7 @@ const Projects = () => {
                 </div>
 
                 <div>
-                  <Link className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
+                  <Link to={'/green-details'} className="btn btn-sm bg-purple-600 text-white hover:bg-purple-700">
                     Details
                   </Link>
                 </div>

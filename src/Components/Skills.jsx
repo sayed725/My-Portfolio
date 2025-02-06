@@ -8,16 +8,7 @@ const Skills = () => {
           Skills<span className="text-purple-600">.</span>
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {/* Web Design */}
-          <div>
-            <h3 className="text-xl font-semibold text-purple-800 mb-4">Web Design</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li className="">UI/UX Design</li>
-              <li>Responsive Design</li>
-              <li>Wireframing</li>
-              <li>User Research</li>
-            </ul>
-          </div>
+         
           {/* Frontend */}
           <div>
             <h3 className="text-xl font-semibold text-purple-800 mb-4">Frontend</h3>
@@ -38,6 +29,16 @@ const Skills = () => {
               <li>MongoDB</li>
               <li>ExpressJS</li>
               <li>Vercel</li>
+            </ul>
+          </div>
+           {/* Tools */}
+           <div>
+            <h3 className="text-xl font-semibold text-purple-800 mb-4">Experienced Tools</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li className="">Vs Coder</li>
+              <li>Github</li>
+              <li>Npm</li>
+              <li>Figma</li>
             </ul>
           </div>
           {/* Soft Skills */}
