@@ -45,7 +45,7 @@ const Footer = () => {
         <div className='flex justify-center items-center mt-6'>
           <h2 className='border-r-2 pr-4 border-[#ebb475]'>Address: Nawabjong , Dhaka 1320</h2>
           <h2 className='border-r-2 pl-4 pr-4 border-[#ebb475]'>Phone: +8801627142598</h2>
-          <h2 className='pl-4'>Active Hours: Mon – Sat: 8:00 – 20:00</h2>
+          <h2 className='pl-4'>Active Hours: Sun – Thus: 9:00am – 08:00pm</h2>
         </div>
 
         <hr className='my-6 border-gray-200 md:my-10 ' />

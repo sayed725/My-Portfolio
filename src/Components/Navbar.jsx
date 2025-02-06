@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li>
       <NavLink
-            to="/"
+            to="/projects"
             className={({ isActive }) =>
               isActive
                 ? "text-purple-600 font-semibold"
@@ -93,7 +93,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="flex gap-5 flex-col justify-center items-center px-1  dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
              {links}
             </ul>
@@ -103,7 +103,7 @@ const Navbar = () => {
         </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="flex gap-5 px-1 text-semibold">
             {links}
           </ul>
         </div>

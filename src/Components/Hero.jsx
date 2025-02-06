@@ -69,7 +69,7 @@ const HeroSection = () => {
 
 
           <div className="mt-5 flex justify-center lg:justify-start space-x-4">
-           <a href="https://drive.google.com/file/d/1XpNraQXXgNmy_t18TKKJfZRXHjPrisgG/view?usp=sharing" target="_blank">   <button className="bg-purple-600 text-white px-3 sm:px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 flex items-center gap-2">
+           <a href="https://drive.google.com/file/d/1xUa-WkEOkaHclDsT4Jzo30v2lNWLIVLZ/view?usp=sharing" target="_blank">   <button className="bg-purple-600 text-white px-3 sm:px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 flex items-center gap-2">
               Download Resume <FaDownload/>
             </button> </a>
             <a href="#1234"><button className="border border-gray-800 px-3 sm:px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 hover:text-white">

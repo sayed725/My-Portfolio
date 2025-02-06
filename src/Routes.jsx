@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import NavContact from "./Components/NavContact";
 import NavAbout from "./Components/NavAbout";
 import NavSkills from "./Components/NavSkills";
+import NavProjects from "./Components/NavProjects";
 
 
 
@@ -30,6 +31,10 @@ import NavSkills from "./Components/NavSkills";
         {
             path:'/skills',
             element: <NavSkills></NavSkills>
+        },
+        {
+            path:'/projects',
+            element: <NavProjects></NavProjects>
         },
       ]
     },

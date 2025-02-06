@@ -26,8 +26,8 @@ const ContactForm = () => {
           <div className="flex items-start gap-4">
             <FaPhoneAlt className="text-purple-600 hover:text-purple-500 text-2xl" />
             <div>
-              <p className="font-semibold">01627142598</p>
-              <p>Mon to Fri 9am to 8pm</p>
+              <p className="font-semibold">+8801627142598</p>
+              <p>Sun to Thus 9am to 8pm</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
