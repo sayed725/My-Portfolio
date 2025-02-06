@@ -1,10 +1,16 @@
 import React from 'react';
+import toast from 'react-hot-toast';
 import { FaHome, FaPhoneAlt, FaEnvelope, FaWhatsappSquare  } from 'react-icons/fa';
 
 const NavContact = () => {
 
     const handleSubmit =(e)=>{
         e.preventDefault()
+        
+    }
+
+    const handleresponse = ()=>{
+      toast.success("Thanks for Your Response")
     }
 
 
@@ -71,6 +77,7 @@ const NavContact = () => {
             className="p-3 border rounded-lg w-full h-[140px]"
           ></textarea>
           <button
+          onClick={handleresponse}
             type="submit"
             className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700"
           >
