@@ -1,5 +1,4 @@
-import React from "react";
-import { FaDownload } from "react-icons/fa";
+
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -70,7 +69,7 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 z-10 shadow-sm">
-      <div className="navbar bg-white max-w-7xl mx-auto  px-0">
+      <div className="navbar bg-white max-w-7xl mx-auto">
         <div className="navbar-start gap-2">
           <div className="dropdown border-2 lg:border-none border-purple-600 rounded-md">
             <div tabIndex={0} role="button" className="btn-md btn sm:btn btn-ghost lg:hidden">
