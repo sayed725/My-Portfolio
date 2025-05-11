@@ -1,31 +1,63 @@
-import React from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { FaHome, FaPhoneAlt, FaEnvelope, FaWhatsappSquare  } from 'react-icons/fa';
+import { FaHome, FaPhoneAlt, FaEnvelope, FaWhatsappSquare } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+  // State to manage form inputs
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
-    const handleSubmit =(e)=>{
-        e.preventDefault()
-       
-    }
-    const handleresponse = ()=>{
-      toast.success("Thanks for Your Response")
-    }
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // EmailJS configuration
+    const serviceID = `${import.meta.env.VITE_SERVICE_ID}`; // Replace with your EmailJS Service ID
+    const templateID = `${import.meta.env.VITE_TEMPLATE_ID}`; // Replace with your EmailJS Template ID
+    const publicKey = `${import.meta.env.VITE_PUBLIC_KEY}`; // Replace with your EmailJS Public Key
+
+    // Send email using EmailJS
+    emailjs.send(serviceID, templateID, {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    }, publicKey)
+      .then(() => {
+        toast.success('Message sent successfully!');
+        // Reset form after successful submission
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        toast.error('Failed to send message. Please try again.');
+      });
+  };
 
   return (
     <div id="contact" className="py-10 px-4 lg:px-0">
-         <h2 className="text-5xl font-bold text-gray-900 mb-10 text-start">
-          Contact Me<span className="text-purple-600">.</span>
-        </h2>
-      <div className=" flex flex-col md:flex-row gap-8 ">
+      <h2 className="text-5xl font-bold text-gray-900 mb-10 text-start">
+        Contact Me<span className="text-purple-600">.</span>
+      </h2>
+      <div className="flex flex-col md:flex-row gap-8">
         {/* Contact Info Section */}
         <div className="flex flex-col gap-4">
           <div className="flex items-start gap-4">
             <FaHome className="text-purple-600 hover:text-purple-500 text-2xl" />
             <div>
               <p className="font-semibold">Dhaka, Bangladesh</p>
-              <p>Nawabjong,Dhaka 1320</p>
+              <p>Nawabjong, Dhaka 1320</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -52,35 +84,51 @@ const ContactForm = () => {
         </div>
 
         {/* Form Section */}
-        <form onClick={handleSubmit} className="flex-1 grid sm:grid-cols-2 gap-5">
-          <div className='flex flex-col gap-10'>
-          <input
-            type="text"
-            placeholder="Enter your name"
-            className="p-3 border rounded-lg w-full"
-          />
-          <input
-            type="email"
-            placeholder="Enter email address"
-            className="p-3 border rounded-lg w-full"
-          />
-          <input
-            type="text"
-            placeholder="Enter subject"
-            className="p-3 border rounded-lg w-full"
-          />
+        <form onSubmit={handleSubmit} className="flex-1 grid sm:grid-cols-2 gap-5">
+          <div className="flex flex-col gap-10">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+              className="p-3 border rounded-lg w-full"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter email address"
+              className="p-3 border rounded-lg w-full"
+              required
+            />
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Enter subject"
+              className="p-3 border rounded-lg w-full"
+              required
+            />
           </div>
-          <div className='flex flex-col gap-10'>
-          <textarea
-            placeholder="Enter Message"
-            className="p-3 border rounded-lg w-full h-[140px]"
-          ></textarea>
-          <button onClick={handleresponse}
-            type="submit"
-            className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700"
-          >
-            SEND MESSAGE
-          </button>
+          <div className="flex flex-col gap-10">
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Enter Message"
+              className="p-3 border rounded-lg w-full h-[140px]"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700"
+            >
+              SEND MESSAGE
+            </button>
           </div>
         </form>
       </div>
