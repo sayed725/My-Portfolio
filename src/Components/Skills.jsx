@@ -1,58 +1,71 @@
-import React from "react";
+
+import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
+   const skills = [
+    // Front-end skills --->
+    {
+      name: "HTML",
+      icon: "https://skillicons.dev/icons?i=html",
+      progress: 95,
+    },
+    {
+      name: "CSS",
+      icon: "https://skillicons.dev/icons?i=css",
+      progress: 90,
+    },
+    {
+      name: "tailwindcss",
+      icon: "https://skillicons.dev/icons?i=tailwindcss",
+      progress: 95,
+    },
+    {
+      name: "JavaScript",
+      icon: "https://skillicons.dev/icons?i=js",
+      progress: 70,
+    },
+    {
+      name: "React.js",
+      icon: "https://skillicons.dev/icons?i=react",
+      progress: 60,
+    },
+    {
+      name: "Firebase",
+      icon: "https://skillicons.dev/icons?i=firebase",
+      progress: 75,
+    },
+    // Back-end skills --->
+    {
+      name: "Node.js",
+      icon: "https://skillicons.dev/icons?i=nodejs",
+      progress: 40,
+    },
+    {
+      name: "MongoDB",
+      icon: "https://skillicons.dev/icons?i=mongodb",
+      progress: 50,
+    },
+    {
+      name: "Express.js",
+      icon: "https://skillicons.dev/icons?i=express",
+      progress: 45,
+    },
+    {
+      name: "Next.js",
+      icon: "https://skillicons.dev/icons?i=nextjs",
+      progress: 30,
+    },
+  ];
+
+
+
   return (
     <div className="py-10">
-      <div className="px-4 lg:px-0">
-        <h2 className="text-5xl font-extrabold text-gray-900 mb-8">
-          Skills<span className="text-purple-600">.</span>
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
-         
-          {/* Frontend */}
-          <div>
-            <h3 className="text-xl font-semibold text-purple-800 mb-4">Frontend</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>JavaScript</li>
-              <li>ReactJS</li>
-              <li>NextJS</li>
-              <li>Firebase</li>
-              <li>Tailwind CSS</li>
-
-            </ul>
-          </div>
-          {/* Backend */}
-          <div>
-            <h3 className="text-xl font-semibold text-purple-800 mb-4">Backend</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>NodeJS</li>
-              <li>MongoDB</li>
-              <li>ExpressJS</li>
-              <li>Vercel</li>
-            </ul>
-          </div>
-           {/* Tools */}
-           <div>
-            <h3 className="text-xl font-semibold text-purple-800 mb-4">Experienced Tools</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li className="">Vs Coder</li>
-              <li>Github</li>
-              <li>Npm</li>
-              <li>Figma</li>
-            </ul>
-          </div>
-          {/* Soft Skills */}
-          <div>
-            <h3 className="text-xl font-semibold text-purple-800 mb-4">Soft Skills</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li>Effective Communication</li>
-              <li>Collaboration</li>
-              <li>Commitment</li>
-              <li>Leadership</li>
-            </ul>
-          </div>
+     <div className="flex gap-6 md:gap-8 flex-wrap w-full items-center justify-center">
+          {skills.slice(0, 6).map((skill, index) => (
+            <SkillsCard key={index} skill={skill} />
+          ))}
         </div>
-      </div>
     </div>
   );
 };
