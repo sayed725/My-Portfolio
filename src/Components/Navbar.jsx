@@ -97,7 +97,7 @@ const Navbar = () => {
              {links}
             </ul>
           </div>
-          <div className="sm:text-3xl font-bold text-gray-900">
+          <div className="sm:text-4xl font-bold text-gray-900">
           Abu Sayed Khan<span className="text-purple-600">.</span>
         </div>
         </div>
