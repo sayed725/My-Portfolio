@@ -23,9 +23,9 @@ const ContactForm = () => {
     e.preventDefault();
 
     // EmailJS configuration
-    const serviceID = `${import.meta.env.VITE_SERVICE_ID}`; // Replace with your EmailJS Service ID
-    const templateID = `${import.meta.env.VITE_TEMPLATE_ID}`; // Replace with your EmailJS Template ID
-    const publicKey = `${import.meta.env.VITE_PUBLIC_KEY}`; // Replace with your EmailJS Public Key
+    const serviceID = `${import.meta.env.VITE_SERVICE_ID}`; 
+    const templateID = `${import.meta.env.VITE_TEMPLATE_ID}`; 
+    const publicKey = `${import.meta.env.VITE_PUBLIC_KEY}`; /
 
     // Send email using EmailJS
     emailjs.send(serviceID, templateID, {
