@@ -1,18 +1,19 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-scroll"
+
 
 // import logo from '../assets/images/smalllogo.png'
 const Footer = () => {
   return (
-    <footer className='bg-white mx-auto'>
+    <footer className='bg-white mx-auto '>
       <hr />
-      <div className=' py-8 '>
+      <div className='pt-5 lg:pt-10'>
         <div className='flex flex-col items-center text-center'>
           <div className='flex gap-2 items-center'>
             {/* <img className='w-auto h-7' src={logo} alt='' /> */}
-            <span className="sm:text-3xl font-bold text-gray-900">Abu Sayed Khan</span>
+            <span className="text-xl sm:text-4xl font-bold text-gray-900">Abu Sayed Khan</span>
           </div>
 
-          <div className='flex flex-wrap justify-center mt-6 mx-4'>
+          <div className='flex flex-wrap justify-center mt-6'>
             <Link
               to='/'
               className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
@@ -23,7 +24,8 @@ const Footer = () => {
             </Link>
 
             <Link
-              to='/about'
+              to='about'
+              smooth={true} duration={700}
               className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
               aria-label='Reddit'
             >
@@ -32,7 +34,26 @@ const Footer = () => {
             </Link>
 
             <Link
-              to='/contact'
+              to='skills'
+              smooth={true} duration={700}
+              className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+              aria-label='Reddit'
+            >
+              {' '}
+            Skills{' '}
+            </Link>
+            <Link
+              to='projects'
+              smooth={true} duration={700}
+              className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+              aria-label='Reddit'
+            >
+              {' '}
+              Projects{' '}
+            </Link>
+            <Link
+              to='contact'
+              smooth={true} duration={700}
               className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
               aria-label='Reddit'
             >
@@ -42,15 +63,15 @@ const Footer = () => {
 
           </div>
         </div>
-        <div className='flex justify-center items-center mt-6'>
-          <h2 className='border-r-2 pr-4 border-[#ebb475]'>Address: Nawabjong , Dhaka 1320</h2>
-          <h2 className='border-r-2 pl-4 pr-4 border-[#ebb475]'>Phone: +8801627142598</h2>
-          <h2 className='pl-4'>Active Hours: Sun – Thus: 9:00am – 08:00pm</h2>
+        <div className='flex justify-center flex-col sm:flex-row items-center mt-6 w-11/12 mx-auto'>
+          <h2 className='border-b-2 sm:border-b-0 sm:border-r-2  sm:pr-4 border-[#ebb475]'>Address: Nawabjong , Dhaka 1320</h2>
+          <h2 className='border-b-2  sm:border-b-0 sm:border-r-2 sm:pl-4 sm:pr-4 border-[#ebb475]'>Phone: +8801627142598</h2>
+          <h2 className='border-b-2 sm:border-b-0 sm:pl-4 text-center sm:text-start border-[#ebb475]'>Active Hours: <hr className="sm:hidden" /> Sun – Thus: 9:00am – 08:00pm</h2>
         </div>
 
-        <hr className='my-6 border-gray-200 md:my-10 ' />
+        <hr className='my-5 border-gray-200 ' />
 
-        <div className='flex flex-col items-center sm:flex-row sm:justify-between gap-2 lg:gap-0'>
+        <div className='flex flex-col items-center sm:flex-row sm:justify-between gap-2 lg:gap-0 w-11/12 mx-auto my-3'>
           <p className='text-sm text-gray-500 '>
             © Copyright 2024. All Rights Reserved.
           </p>

@@ -1,46 +1,40 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
+
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-         <a href="/" className="text-purple-600 hover:text-purple-600">
+         <NavLink to="/" className="text-purple-600 hover:text-purple-600">
           Home
-        </a>
+        </NavLink>
       </li>
       <li>
-         <a href="/#about" className="hover:text-purple-600">
-          About
-        </a>
+        <Link to="about" smooth={true} duration={700} className="hover:text-purple-700">About</Link>
       </li>
       <li>
-         <a href="/#skills" className="hover:text-purple-600">
-          Skills
-        </a>
+          <Link to="skills" smooth={true} duration={700} className="hover:text-purple-700">Skills</Link>
       </li>
       <li>
-         <a href="/#projects" className="hover:text-purple-600">
-          Projects
-        </a>
+         <Link to="projects" smooth={true} duration={700} className="hover:text-purple-700">Projects</Link>
       </li>
      
       <li>
-        <a href="/#contact" className="hover:text-purple-600">
-          Contact
-        </a>
+       <Link to="contact" smooth={true} duration={700} className="hover:text-purple-700">Contact</Link>
       </li>
     </>
   );
 
   return (
     <div className="sticky top-0 z-10 shadow-sm">
-      <div className="navbar bg-white max-w-7xl mx-auto">
-        <div className="navbar-start gap-2">
+      <div className="navbar px-2 lg:px-0 bg-white max-w-7xl mx-auto">
+        <div className="navbar-start w-full  gap-2">
           <div className="dropdown border-2 lg:border-none border-purple-600 rounded-md">
             <div
               tabIndex={0}
               role="button"
-              className="btn-md btn sm:btn btn-ghost lg:hidden"
+              className="btn-sm btn sm:btn btn-ghost  lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,25 +54,26 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="flex gap-5 flex-col justify-center items-center px-1  dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="flex gap-5 flex-col justify-center items-center px-1  dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-[150px] p-2 shadow"
             >
               {links}
             </ul>
           </div>
-          <div className="sm:text-4xl font-bold text-gray-900">
+          <div className="text-xl sm:text-4xl font-bold text-gray-900">
             Abu Sayed Khan<span className="text-purple-600">.</span>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex gap-5 px-1 text-semibold">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <a
-            href="/#contact"
-            className="bg-purple-600 text-white btn rounded-lg font-semibold hover:bg-purple-700"
+        <div className="navbar-end lg:w-full">
+          <Link
+            to="contact"
+            smooth={true} duration={700}
+            className="bg-purple-600 text-white btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-purple-700"
           >
             Hire Me
-          </a>
+          </Link>
         </div>
       </div>
     </div>

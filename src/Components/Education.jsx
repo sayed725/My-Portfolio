@@ -4,30 +4,30 @@ const educationData = [
   {
     id: 1,
     institution: "University Of Dhaka",
-    certificate: "Certificate Of BBA",
+    certificate: "Certificate Of MBA",
     role: "Graduated",
-    duration: "Jan 2017 - Dec 2021",
+    duration: "Jan 2021-Dec 2022",
     description: `
-     Completed Bachelor of Business Administration(BBA) from Kabi Najrul Govt College (Under Dhaka University) "A comprehensive program covering key areas of business, such as management, marketing, and finance."
+    Completed Master of Business Administration(MBA) from Kabi Najrul Govt College (Under Dhaka University) "An advanced degree focusing on leadership, strategy, and business operations in a global context."
     `,
   },
   {
     id: 2,
     institution: "University Of Dhaka",
-    certificate: "Certificate Of MBA",
+    certificate: "Certificate Of BBA",
     role: "Graduated",
-    duration: "Jan 2021 - Dec 2022",
+    duration: "Jan 2017-Dec 2021",
     description: `
-    Completed Master of Business Administration(MBA) from Kabi Najrul Govt College (Under Dhaka University) "An advanced degree focusing on leadership, strategy, and business operations in a global context."
+     Completed Bachelor of Business Administration(BBA) from Kabi Najrul Govt College (Under Dhaka University) "A comprehensive program covering key areas of business, such as management, marketing, and finance."
     `,
   },
- 
+  
 ];
 
 const Education = () => {
   return (
-    <section className="py-10">
-      <div className=" mx-auto px-4 lg:px-0">
+    <section className="py-5 lg:py-10">
+      <div className=" mx-auto w-11/12 lg:w-full">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
           Education<span className="text-purple-600">.</span>
@@ -39,8 +39,7 @@ const Education = () => {
           {educationData.map((edu, index) => (
             <div
               key={edu.id}
-              className={`p-6 ${index < educationData.length - 1 ? "border-b border-gray-200" : ""
-                }`}
+              className={`p-6 border-b border-gray-200 shadow hover:shadow-[purple]`}
             >
               <div className="flex flex-col sm:flex-row gap-8 justify-between">
                 <div className="text-start sm:w-1/2">
@@ -49,7 +48,7 @@ const Education = () => {
                   </h3>
                   <div className="flex flex-col sm:flex-row gap-2 sm:items-center  mt-4">
                   <p className="text-gray-600">{edu.role}</p>
-                  <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-center sm:text-start text-sm inline-block">
+                  <span className="bg-purple-500 text-white px-3 lg:px-3 py-1 rounded-full text-center sm:text-start text-sm inline-block">
                     {edu.duration}
                   </span>
                   </div>

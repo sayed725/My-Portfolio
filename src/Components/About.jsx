@@ -1,12 +1,14 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 const About = () => {
   return (
-    <div id="about" className="py-10 mt-10 px-4 lg:px-0">
+   <Element name="about">
+     <div id="about" className="py-5 lg:py-10 w-11/12 mx-auto lg:w-full">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
         About Me<span className="text-purple-600">.</span>
       </h2>
-      <h2 className=" pb-5 text-gray-800">
+      <h2 className=" pb-5 text-gray-800 text-justify">
         Hi, I’m <span className="font-semibold">Abu Sayed Khan</span>,<br /> A
         passionate Frontend Web Developer with a knack for creating interactive,
         responsive, and visually stunning web applications. I specialize in
@@ -43,6 +45,7 @@ const About = () => {
         is asked.
       </li>
     </div>
+   </Element>
   );
 };
 

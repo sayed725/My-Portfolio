@@ -2,12 +2,13 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaHome, FaPhoneAlt, FaEnvelope, FaWhatsappSquare } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { Element } from 'react-scroll';
 
 const ContactForm = () => {
 
 
 
-  
+
   // State to manage form inputs
   const [formData, setFormData] = useState({
     name: '',
@@ -50,7 +51,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div id="contact" className="py-10 px-4 lg:px-0">
+   <Element name="contact">
+     <div id="contact" className=" py-5 lg:py-10 w-11/12 mx-auto lg:w-full">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
         Contact Me<span className="text-purple-600">.</span>
       </h2>
@@ -74,7 +76,7 @@ const ContactForm = () => {
           <div className="flex items-start gap-4">
             <FaEnvelope className="text-purple-600 hover:text-purple-500 text-2xl" />
             <div>
-              <p className="font-semibold">ssayed72533@gmail.com</p>
+              <p className="font-semibold">abusayedkhan.pro@gmail.com</p>
               <p>Send me query anytime!</p>
             </div>
           </div>
@@ -129,7 +131,7 @@ const ContactForm = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700"
+              className="bg-purple-600 text-white btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-purple-700"
             >
               SEND MESSAGE
             </button>
@@ -137,6 +139,7 @@ const ContactForm = () => {
         </form>
       </div>
     </div>
+   </Element>
   );
 };
 

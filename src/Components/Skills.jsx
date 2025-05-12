@@ -1,4 +1,5 @@
 
+import { Element } from "react-scroll";
 import SkillsCard from "./SkillsCard";
 
 const frontend = [
@@ -31,13 +32,14 @@ const Skills = () => {
  
 
   return (
-    <div id="skills" className="py-6 sm:py-10 w-11/12 mx-auto lg:w-full">
+  <Element name="skills">
+      <div id="skills" className="py-5 lg:py-10 w-11/12 mx-auto lg:w-full">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
         My Skills<span className="text-purple-600">.</span>
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
         {/* Frontend Card */}
-        <div className="border-2 rounded-lg p-4 sm:p-5 bg-white shadow-lg">
+        <div className="border-2 rounded-lg p-4 sm:p-5 bg-white shadow-sm  hover:border-2 hover:shadow-[purple]">
           <div>
             <h2 className="text-center font-semibold text-xl sm:text-2xl lg:text-3xl pb-3 border-b-2">
               Front-end
@@ -50,7 +52,7 @@ const Skills = () => {
           </div>
         </div>
         {/* Backend Card */}
-        <div className="border-2 rounded-lg p-4 sm:p-5 bg-white shadow-lg">
+        <div className="border-2 rounded-lg p-4 sm:p-5 bg-white shadow-sm hover:shadow-[purple]">
           <div>
             <h2 className="text-center font-semibold text-xl sm:text-2xl lg:text-3xl pb-3 border-b-2">
               Back-end
@@ -63,7 +65,7 @@ const Skills = () => {
           </div>
         </div>
         {/* Tools Card */}
-        <div className="border-2 rounded-lg p-4 sm:p-5 bg-white shadow-lg">
+        <div className="border-2 rounded-lg p-4 sm:p-5 bg-white shadow-sm hover:shadow-[purple]">
           <div>
             <h2 className="text-center font-semibold text-xl sm:text-2xl lg:text-3xl pb-3 border-b-2">
               Tools
@@ -78,6 +80,7 @@ const Skills = () => {
       </div>
      
     </div>
+  </Element>
   );
 };
 

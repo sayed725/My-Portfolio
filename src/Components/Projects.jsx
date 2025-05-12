@@ -2,11 +2,13 @@ import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Element } from "react-scroll";
 
 
 const Projects = () => {
   return (
-    <section className="py-10" id="projects">
+   <Element name="projects">
+     <section className="py-5 lg:py-10" id="projects">
       <div className="px-4 lg:px-0">
         {/* Section Title */}
         <h2 className="text-5xl font-extrabold text-gray-900 mb-12">
@@ -250,6 +252,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
+   </Element>
   );
 };
 

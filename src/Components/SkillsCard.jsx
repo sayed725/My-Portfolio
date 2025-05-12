@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const SkillsCard = ({ skill }) => {
   return (
-    <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-lg w-24 h-24 justify-center transition-transform hover:scale-105">
+    <div className="flex flex-col items-center p-4 bg-white rounded-lg hover:border-2 hover:border-[purple] w-24 h-24 justify-center transition-transform hover:scale-105">
       <img
         src={skill.icon}
         alt={`${skill.name} icon`}
