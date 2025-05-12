@@ -2,6 +2,7 @@ import { FaDownload, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
   return (
@@ -10,16 +11,28 @@ const HeroSection = () => {
         {/* Left Section */}
         <div className="w-11/12 mx-auto lg:w-1/2 text-center lg:text-left">
           <p className="text-gray-600 text-lg tracking-wider sm:text-xl">
-            Hey, I’m{" "}
+            Hey,<span className="text-purple-700"> I’m </span>
              👋
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider leading-tight mt-4 sm:mt-6 lg:mt-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide  mt-4 sm:mt-6 lg:mt-8">
             <span className="text-purple-600">Abu Sayed Khan</span>{" "}
           </h1>
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wider leading-tight mt-4 sm:mt-4 lg:mt-4">
-           A <span className="text-purple-600">Frontend Web Developer</span>{" "}
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 sm:mt-4 lg:mt-4">
+           A  
+             <span style={{ color: 'purple-700', fontWeight: 'semi-bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={[' Web Developer',' Front-end Developer',' MERN Stack Developer',' React.Js Developer']}
+            loop={Infinity}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
           </h1>
-          <p className="text-gray-800 mt-6 sm:mt-8 lg:mt-10 text-base tracking-wider sm:text-lg text-center lg:text-start max-w-md mx-auto lg:mx-0">
+          <p className="text-gray-800 mt-4 text-base tracking-wider sm:text-lg text-center lg:text-start max-w-md mx-auto lg:mx-0">
             Crafting seamless user experiences with clean, responsive, and
             interactive web designs. Passionate about turning ideas into
             functional and visually appealing websites.
@@ -68,7 +81,7 @@ const HeroSection = () => {
               href="https://drive.google.com/file/d/1xUa-WkEOkaHclDsT4Jzo30v2lNWLIVLZ/view?usp=sharing"
               target="_blank"
             >
-              <button className="bg-purple-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-purple-700 flex items-center justify-center gap-2 w-full sm:w-auto">
+              <button className="bg-purple-600 text-white btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-purple-700 flex items-center justify-center gap-2 w-full sm:w-auto">
                 Download Resume <FaDownload />
               </button>
             </a>
@@ -76,7 +89,7 @@ const HeroSection = () => {
             smooth={true} duration={700}
             >
            
-              <button className="border border-gray-800 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-gray-800 hover:text-white w-full sm:w-auto">
+              <button className="border border-gray-800  btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-gray-800 hover:text-white w-full sm:w-auto">
                 Browse Projects
               </button>
             </Link>
@@ -86,7 +99,7 @@ const HeroSection = () => {
         {/* Right Section */}
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
           <motion.div
-            animate={{ y: [-32, 32] }} // Move up 20px and down 20px
+            animate={{ y: [-30, 30] }} // Move up 20px and down 20px
             transition={{
               duration: 3, // Duration of one cycle
               repeat: Infinity, // Repeat indefinitely
