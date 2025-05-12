@@ -3,10 +3,7 @@ import MainLayout from "./MainLayout";
 import Home from "./Pages/Home";
 
 
-import NavContact from "./Components/NavContact";
-import NavAbout from "./Components/NavAbout";
-import NavSkills from "./Components/NavSkills";
-import NavProjects from "./Components/NavProjects";
+
 import MovieLifyDetails from "./Pages/MovieLifyDetails";
 import PostPadDetails from "./Pages/PostPadDetails";
 import GreenDetails from "./Pages/GreenDetails";
@@ -24,22 +21,7 @@ import BiteBankDetails from "./Pages/BiteBankDetails";
             path: '/',
             element: <Home></Home>
         },
-        {
-            path: '/about',
-            element: <NavAbout></NavAbout>
-        },
-        {
-            path:'/contact',
-            element: <NavContact></NavContact>
-        },
-        {
-            path:'/skills',
-            element: <NavSkills></NavSkills>
-        },
-        {
-            path:'/projects',
-            element: <NavProjects></NavProjects>
-        },
+      
         {
             path:'/movielify-details',
             element: <MovieLifyDetails></MovieLifyDetails>

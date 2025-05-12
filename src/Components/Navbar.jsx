@@ -4,7 +4,7 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-         <a href="#" className="text-purple-600 hover:text-purple-600">
+         <a href="/" className="text-purple-600 hover:text-purple-600">
           Home
         </a>
       </li>
