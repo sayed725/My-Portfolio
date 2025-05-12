@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaFacebook, FaTwitter  } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="" id="banner">
       <div className="hero bg-base-200 h-[600px]">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img

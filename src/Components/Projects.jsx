@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <section className="py-10" id="1234">
+    <section className="py-10" id="projects">
       <div className="px-4 lg:px-0">
         {/* Section Title */}
         <h2 className="text-5xl font-extrabold text-gray-900 mb-12">

@@ -4,6 +4,10 @@ import { FaHome, FaPhoneAlt, FaEnvelope, FaWhatsappSquare } from 'react-icons/fa
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+
+
+
+  
   // State to manage form inputs
   const [formData, setFormData] = useState({
     name: '',
@@ -47,7 +51,7 @@ const ContactForm = () => {
 
   return (
     <div id="contact" className="py-10 px-4 lg:px-0">
-      <h2 className="text-5xl font-bold text-gray-900 mb-10 text-start">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
         Contact Me<span className="text-purple-600">.</span>
       </h2>
       <div className="flex flex-col md:flex-row gap-8">
@@ -71,7 +75,7 @@ const ContactForm = () => {
             <FaEnvelope className="text-purple-600 hover:text-purple-500 text-2xl" />
             <div>
               <p className="font-semibold">ssayed72533@gmail.com</p>
-              <p>Send us me query anytime!</p>
+              <p>Send me query anytime!</p>
             </div>
           </div>
           <div className="flex items-start gap-4">

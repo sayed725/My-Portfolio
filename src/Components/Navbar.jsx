@@ -1,68 +1,33 @@
-
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-      <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "text-purple-600 font-semibold"
-                : "hover:text-purple-600"
-            }
-          >
-            Home
-          </NavLink>
+         <a href="#" className="text-purple-600 hover:text-purple-600">
+          Home
+        </a>
       </li>
       <li>
-      <NavLink
-            to="/skills"
-            className={({ isActive }) =>
-              isActive
-                ? "text-purple-600 font-semibold"
-                : "hover:text-purple-600"
-            }
-          >
-            Skills
-          </NavLink>
+         <a href="/#about" className="hover:text-purple-600">
+          About
+        </a>
       </li>
       <li>
-      <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              isActive
-                ? "text-purple-600 font-semibold"
-                : "hover:text-purple-600"
-            }
-          >
-            Projects
-          </NavLink>
+         <a href="/#skills" className="hover:text-purple-600">
+          Skills
+        </a>
       </li>
       <li>
-      <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? "text-purple-600 font-semibold"
-                : "hover:text-purple-600"
-            }
-          >
-            About
-          </NavLink>
+         <a href="/#projects" className="hover:text-purple-600">
+          Projects
+        </a>
       </li>
+     
       <li>
-      <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive
-                ? "text-purple-600 font-semibold"
-                : "hover:text-purple-600"
-            }
-          >
-            Contact
-          </NavLink>
+        <a href="/#contact" className="hover:text-purple-600">
+          Contact
+        </a>
       </li>
     </>
   );
@@ -72,7 +37,11 @@ const Navbar = () => {
       <div className="navbar bg-white max-w-7xl mx-auto">
         <div className="navbar-start gap-2">
           <div className="dropdown border-2 lg:border-none border-purple-600 rounded-md">
-            <div tabIndex={0} role="button" className="btn-md btn sm:btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn-md btn sm:btn btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -86,7 +55,6 @@ const Navbar = () => {
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
                   className="text-xl text-purple-600"
-
                 />
               </svg>
             </div>
@@ -94,20 +62,23 @@ const Navbar = () => {
               tabIndex={0}
               className="flex gap-5 flex-col justify-center items-center px-1  dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-             {links}
+              {links}
             </ul>
           </div>
           <div className="sm:text-4xl font-bold text-gray-900">
-          Abu Sayed Khan<span className="text-purple-600">.</span>
-        </div>
+            Abu Sayed Khan<span className="text-purple-600">.</span>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="flex gap-5 px-1 text-semibold">
-            {links}
-          </ul>
+          <ul className="flex gap-5 px-1 text-semibold">{links}</ul>
         </div>
         <div className="navbar-end">
-          <Link to='/contact' className="bg-purple-600 text-white btn rounded-lg font-semibold hover:bg-purple-700">Hire Me</Link>
+          <a
+            href="/#contact"
+            className="bg-purple-600 text-white btn rounded-lg font-semibold hover:bg-purple-700"
+          >
+            Hire Me
+          </a>
         </div>
       </div>
     </div>

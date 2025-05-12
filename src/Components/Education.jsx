@@ -29,7 +29,7 @@ const Education = () => {
     <section className="py-10">
       <div className=" mx-auto px-4 lg:px-0">
         {/* Section Title */}
-        <h2 className="text-5xl font-bold text-gray-900 mb-8 text-start">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
           Education<span className="text-purple-600">.</span>
         </h2>
        

@@ -2,11 +2,11 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="py-10 mt-10 px-4 lg:px-0">
-      <h2 className="text-5xl font-extrabold">
+    <div id="about" className="py-10 mt-10 px-4 lg:px-0">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
         About Me<span className="text-purple-600">.</span>
       </h2>
-      <h2 className=" pt-10 pb-5 text-gray-800">
+      <h2 className=" pb-5 text-gray-800">
         Hi, I’m <span className="font-semibold">Abu Sayed Khan</span>,<br /> A
         passionate Frontend Web Developer with a knack for creating interactive,
         responsive, and visually stunning web applications. I specialize in
