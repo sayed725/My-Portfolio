@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="hero bg-base-200 h-[600px]">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
-            src="/demo.avif"
+            src="/public/1130-removebg.png"
             className="w-full rounded-lg shadow-2xl h-full"
           />
           <div className="w-full">

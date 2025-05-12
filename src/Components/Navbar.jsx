@@ -60,7 +60,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="text-xl sm:text-4xl font-bold text-gray-900">
-            Abu Sayed Khan<span className="text-purple-600">.</span>
+          Sayed<span className="text-purple-600">.</span>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
