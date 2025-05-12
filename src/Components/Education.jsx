@@ -27,7 +27,7 @@ const educationData = [
 const Education = () => {
   return (
     <section className="py-5 lg:py-10">
-      <div className=" mx-auto w-11/12 lg:w-full">
+      <div className="">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
           Education<span className="text-purple-600">.</span>

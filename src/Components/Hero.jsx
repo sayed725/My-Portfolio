@@ -1,13 +1,14 @@
 import { FaDownload, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import { Typewriter } from "react-simple-typewriter";
 
 const HeroSection = () => {
   return (
-    <section className="py-6 sm:py-8 lg:py-10 ">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+   <Element name="banner">
+     <section className="py-6 sm:py-8 lg:py-10 ">
+      <div className="flex flex-col lg:flex-row items-center">
         {/* Left Section */}
         <div className="w-11/12 mx-auto lg:w-1/2 text-center lg:text-left">
           <p className="text-gray-600 text-lg tracking-wider sm:text-xl">
@@ -99,9 +100,9 @@ const HeroSection = () => {
         {/* Right Section */}
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex justify-center">
           <motion.div
-            animate={{ y: [-30, 30] }} // Move up 20px and down 20px
+            animate={{ y: [-5, 30] }} // Move up 20px and down 20px
             transition={{
-              duration: 3, // Duration of one cycle
+              duration: 2, // Duration of one cycle
               repeat: Infinity, // Repeat indefinitely
               repeatType: "reverse", // Reverse direction for smooth up-and-down
               ease: "easeInOut", // Smooth easing for natural motion
@@ -118,6 +119,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
+   </Element>
   );
 };
 

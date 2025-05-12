@@ -33,7 +33,7 @@ const Skills = () => {
 
   return (
   <Element name="skills">
-      <div id="skills" className="py-5 lg:py-10 w-11/12 mx-auto lg:w-full">
+      <div id="skills" className="py-5">
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 sm:mb-10">
         My Skills<span className="text-purple-600">.</span>
       </h2>
