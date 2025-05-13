@@ -23,7 +23,7 @@ const tools = [
   { name: "Bun", icon: "https://skillicons.dev/icons?i=bun" },
   { name: "NPM", icon: "https://skillicons.dev/icons?i=npm" },
   { name: "Figma", icon: "https://skillicons.dev/icons?i=figma" },
-  { name: "VS Code", icon: "https://skillicons.dev/icons?i=vscode" },
+  { name: "VSCode", icon: "https://skillicons.dev/icons?i=vscode" },
   { name: "Vercel", icon: "https://skillicons.dev/icons?i=vercel" },
   { name: "Netlify", icon: "https://skillicons.dev/icons?i=netlify" },
 ];
