@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 
 const NewProjectCard = ({ project }) => {
+
+
+
   return (
-    <Link to={"/postpad-details"}
+    <Link to={`${project.id==2?'postpad-details':''}${project.id==3?'bitebank-details':''}${project.id==4?'/movielify-details':''}${project.id==5?'/green-details':''}`}
      className=" text-white">
       <div className="container mx-auto">
         <div className="">
@@ -11,7 +14,7 @@ const NewProjectCard = ({ project }) => {
             <img
               src={project.image}
               alt=""
-              className="w-full h-[450px] group-hover:scale-110 filter brightness-90  transition-transform duration-500"
+              className="w-full h-[450px] group-hover:scale-110 filter brightness-90 object-cover  transition-transform  duration-500"
             />
 
             {/* Overlay */}
@@ -21,7 +24,7 @@ const NewProjectCard = ({ project }) => {
                   {project.name}
                 </h1>
                 <p className="text-white text-sm text-justify">
-                  {project.description.slice(0, 100)}...
+                  {project.title}
                 </p>
                 <h2 className="font-semibold text-gray-900">Tech Stack</h2>
                 <div className="flex flex-wrap gap-1">

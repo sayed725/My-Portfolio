@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 
 const MovielifyDetails=()=> {
+
+   useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
+
   const technologies = [
     "React", "TailwindCSS", "DaisyUI", "Swiper.js",
     "React Hook Form", "React Simple Star Rating",

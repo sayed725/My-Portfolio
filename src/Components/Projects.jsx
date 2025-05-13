@@ -8,6 +8,7 @@ const Projects = () => {
       id: 1,
       name: "Care Matrix",
       image: "/bitebank-1.jpeg",
+      title:"A multi-role complete hospital management system for doctors, pharmacists, receptionist, administrators and patients.",
       description:
         "Care Matrix is a full-featured hospital management platform designed to streamline appointments, enhance internal communication, optimize pharmacy operations, and centralize admin controls for patients, doctors, pharmacists, receptionists and administrators. Care Matrix is a robust, role-based hospital management system developed by a 6-member team to revolutionize healthcare service delivery. As the team leader, I spearheaded the project’s architecture, task delegation, team collaboration, and contributed significantly to the frontend, backend, and dashboard development. The platform addresses key healthcare needs with the following major features: Streamlined Appointments - Patients can book, reschedule, or cancel appointments seamlessly, with a dynamic calendar view and real-time availability checks for doctors. Enhanced Internal Communication - I implemented a real-time chat system without socket.io, enabling secure messaging between patients, doctors, and pharmacists, with live data updates across roles using polling and TanStack Query. Optimized Pharmacy Operations - The pharmacy module includes inventory tracking, stock alerts, and order management, ensuring efficient medicine dispensing and restocking processes. Centralized Admin Controls - Admins can manage user roles, approve doctor applications, and oversee system analytics, with a custom workflow for role-based data access and approval requests. Additional contributions include designing a patient rewards system where users earn points for appointments and redeem them for discounts, and managing doctor data approval workflows to validate and integrate new doctors into the system. The project leverages a scalable tech stack, with MongoDB for data storage, Express.js for APIs, and React with Redux for a responsive UI.",
       techStack: [
@@ -31,7 +32,8 @@ const Projects = () => {
     {
       id: 2,
       name: "PostPad",
-      image: "/bitebank-1.jpeg",
+      image: "/Postpad-Home.png",
+      title:"A forum-building website enabling users to post, comment, vote and share content in real time.",
       description:
         "This platform allows users to post, comment, vote, and share content in real-time. Admins can manage users, announcements, and reported activities. The purpose of this project is to create a scalable web application that focuses on user experience, performance, and security.",
       techStack: [
@@ -54,6 +56,7 @@ const Projects = () => {
       id: 3,
       name: "BiteBank",
       image: "/bitebank-1.jpeg",
+      title:"A Food Sharing Website that allows users to add, get , update and delete food operation on several places.",
       description:
         "This is a user-friendly food sharing website where there is some CRUD (adding food,getting food, update food and deleting food) operations on several places. Besides that, users can also request for available food and manage requested foods.",
       techStack: [
@@ -74,7 +77,8 @@ const Projects = () => {
     {
       id: 4,
       name: "Movielify",
-      image: "/bitebank-1.jpeg",
+      image: "/Movielify-moviedetails.png",
+      title:"A User-friendly website of exploring movies, viewing movie details, adding movies and deleting movies while managing user favorites.",
       description:
         "This is a user-friendly Movie Portal to simplify the process of exploring movies, viewing movie details, adding movies, and deleting movies while managing user favorites. This project includes a dynamic user interface, robust functionality, and seamless user experience.",
       techStack: [
@@ -94,7 +98,8 @@ const Projects = () => {
     {
       id: 5,
       name: "Green Edventures",
-      image: "/bitebank-1.jpeg",
+      image: "/green-home.png",
+      title:"A Travel Booking Website that provide information on various eco-adventure options,to browse and learn more about each experience also consult experts if interested.",
       description:
         "This page is a React-based application where users can explore specific types of eco-friendly travel adventures like Forest Expeditions, Mangrove Forest Expeditions.This application provide detailed information on various eco-adventure options, allowing users to browse, learn more about each experience, and consult experts if they’re interested.",
       techStack: [
@@ -111,6 +116,7 @@ const Projects = () => {
       id: 6,
       name: "Gadget Heaven",
       image: "/bitebank-1.jpeg",
+      title:"A e-commerce website of showcasing tech products where User can view details of the product and would like to add to cart or watch list.",
       description:
         "The platform is shopping of accessories. From smart devices to the coolest accessories are available. The platform is the responsive website. In here, users can browse products also browse by categories. They can view details of the product and would like to add to cart or watch list.",
       techStack: ["React", "Tailwind CSS", "Daisy Ui", "Toastify"],

@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 
 const BiteBankDetails = () => {
+   useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   const technologies = [
     "React",
     "TailwindCSS",

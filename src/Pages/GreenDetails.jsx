@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 
 const GreenDetails = () => {
+   useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
     const technologies = [
         "React", "TailwindCSS", "DaisyUI", "Swiper.js",
