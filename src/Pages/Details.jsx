@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Details = () => {
   useEffect(() => {
@@ -268,155 +272,226 @@ const Details = () => {
     );
   }
 
+  // Custom Arrow Components
+  const NextArrow = ({ onClick }) => (
+    <button
+      className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-md bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-all duration-300"
+      onClick={onClick}
+    >
+      <svg className="w-4 h-4 text-white " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  );
+
+  const PrevArrow = ({ onClick }) => (
+    <button
+      className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-purple-600 hover:bg-purple-700 rounded-md flex items-center justify-center transition-all duration-300"
+      onClick={onClick}
+    >
+      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+  );
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    dotsClass: 'slick-dots custom-dots',
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: true,
+          dots: true
+        }
+      }
+    ],
+    appendDots: (dots) => (
+      <div style={{ bottom: '20px' }}>
+        <ul className="flex justify-center space-x-2">{dots}</ul>
+      </div>
+    ),
+    customPaging: () => (
+      <button className="w-3 h-3 bg-purple-600 rounded-full hover:bg-purple-600 transition-all duration-300" />
+    )
+  };
+
   return (
     <div className="min-h-screen w-11/12 mx-auto bg-white text-gray-900 flex flex-col gap-10 py-10">
-
-        
-      <div className="relative flex justify-center overflow-hidden">
+      <Slider {...settings} className="w-full">
         {project.images.map((image, index) => (
-          <img
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className="w-1/2 object-contain h-64 rounded-3xl hover:scale-[1.05] transition-all"
-          />
+          <div key={index} className="flex justify-center">
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-[500px] mx-auto object-cover  sm:object-fill rounded-3xl"
+            />
+          </div>
         ))}
-      </div>
+      </Slider>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mx-auto py-6 px-2"
+      >
+         
+          {project.links && (
+          <div className="mt-6 flex gap-4">
+            <a
+              href={project.links.livePreview}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600"
+            >
+              Live Preview
+            </a>
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700"
+            >
+              <FaGithub size={18} /> GitHub Link
+            </a>
+          </div>
+        )}
 
-        {project.links && (
-            <div className="mt-6 flex gap-4">
-              <a
-                href={project.links.livePreview}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600"
+        <h1 className="text-5xl font-bold">{project.name}</h1>
+        <p className="mt-5">{project.description}</p>
+
+        <section className="mt-6">
+          <h2 className="text-3xl mb-2 font-bold">Technologies Used</h2>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {project.techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="bg-purple-500 text-white px-3 py-1 rounded-md text-sm"
               >
-                Live Preview
-              </a>
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-900 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700"
-              >
-                <FaGithub size={18} /> GitHub Link
-              </a>
-            </div>
-          )}
+                {tech}
+              </span>
+            ))}
+          </div>
+        </section>
 
-
-        <div className="mx-auto py-6 px-2">
-          <h1 className="text-5xl font-bold">{project.name}</h1>
-          <p className="mt-5">{project.description}</p>
-
+        {(project.features || project.keyFeatures) && (
           <section className="mt-6">
-            <h2 className="text-3xl mb-2 font-bold">Technologies Used</h2>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {project.techStack.map((tech, index) => (
-                <span
-                  key={index}
-                  className="bg-purple-500 text-white px-3 py-1 rounded-md text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
+            <h1 className="text-3xl font-bold mb-6">Key Features</h1>
+            {project.features?.public && (
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold mb-3">Public Features</h2>
+                {project.features.public.map((feature, index) => (
+                  <div key={index} className="mb-4">
+                    <h3 className="text-xl mb-2 font-semibold">{feature.section}</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      {feature.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </section>
+            )}
+            {project.features?.privateUser && (
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold mb-3">Private User Features</h2>
+                {project.features.privateUser.map
+                ((feature, index) => (
+                  <div key={index} className="mb-4">
+                    <h3 className="text-xl mb-2 font-semibold">{feature.section}</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      {feature.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </section>
+            )}
+            {project.features?.admin && (
+              <section className="mb-8">
+                <h2 className="text-2xl font-semibold mb-3">Admin Features</h2>
+                {project.features.admin.map((feature, index) => (
+                  <div key={index} className="mb-4">
+                    <h3 className="text-xl mb-2 font-semibold">{feature.section}</h3>
+                    <ul className="list-disc pl-6 space-y-2">
+                      {feature.details.map((subfeature, idx) => (
+                        <li key={idx}>
+                          <strong>{subfeature.subsection}:</strong>
+                          <ul className="list-disc pl-6">
+                            {subfeature.items.map((item, i) => (
+                              <li key={i}>{item}</li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </section>
+            )}
+            {project.keyFeatures && !project.features?.public && !project.features?.privateUser && !project.features?.admin && (
+              <section className="mb-8">
+                <ul className="list-disc pl-6 space-y-2">
+                  {project.keyFeatures.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </section>
+        )}
 
-          {(project.features || project.keyFeatures) && (
-            <section className="mt-6">
-              <h1 className="text-3xl font-bold mb-6">Key Features</h1>
-              {project.features?.public && (
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold mb-3">Public Features</h2>
-                  {project.features.public.map((feature, index) => (
-                    <div key={index} className="mb-4">
-                      <h3 className="text-xl mb-2 font-semibold">{feature.section}</h3>
-                      <ul className="list-disc pl-6 space-y-2">
-                        {feature.details.map((detail, idx) => (
-                          <li key={idx}>{detail}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </section>
-              )}
-              {project.features?.privateUser && (
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold mb-3">Private User Features</h2>
-                  {project.features.privateUser.map((feature, index) => (
-                    <div key={index} className="mb-4">
-                      <h3 className="text-xl mb-2 font-semibold">{feature.section}</h3>
-                      <ul className="list-disc pl-6 space-y-2">
-                        {feature.details.map((detail, idx) => (
-                          <li key={idx}>{detail}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </section>
-              )}
-              {project.features?.admin && (
-                <section className="mb-8">
-                  <h2 className="text-2xl font-semibold mb-3">Admin Features</h2>
-                  {project.features.admin.map((feature, index) => (
-                    <div key={index} className="mb-4">
-                      <h3 className="text-xl mb-2 font-semibold">{feature.section}</h3>
-                      <ul className="list-disc pl-6 space-y-2">
-                        {feature.details.map((subfeature, idx) => (
-                          <li key={idx}>
-                            <strong>{subfeature.subsection}:</strong>
-                            <ul className="list-disc pl-6">
-                              {subfeature.items.map((item, i) => (
-                                <li key={i}>{item}</li>
-                              ))}
-                            </ul>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </section>
-              )}
-              {project.keyFeatures && !project.features?.public && !project.features?.privateUser && !project.features?.admin && (
-                <section className="mb-8">
-                  <ul className="list-disc pl-6 space-y-2">
-                    {project.keyFeatures.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-            </section>
-          )}
+        {project.challenges && (
+          <section className="mt-6">
+            <h2 className="text-2xl font-semibold mb-3">Challenges & Tasks Implemented</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              {project.challenges.map((challenge, index) => (
+                <li key={index}>{challenge}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-          {project.challenges && (
-            <section className="mt-6">
-              <h2 className="text-2xl font-semibold mb-3">Challenges & Tasks Implemented</h2>
-              <ul className="list-disc pl-6 space-y-2">
-                {project.challenges.map((challenge, index) => (
-                  <li key={index}>{challenge}</li>
-                ))}
-              </ul>
-            </section>
-          )}
+        {project.improvementsNeeded && (
+          <section className="mt-6">
+            <h2 className="text-2xl font-semibold mb-3">Improvements Needed</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              {project.improvementsNeeded.map((improvement, index) => (
+                <li key={index}>{improvement}</li>
+              ))}
+            </ul>
+          </section>
+        )}
 
-          {project.improvementsNeeded && (
-            <section className="mt-6">
-              <h2 className="text-2xl font-semibold mb-3">Improvements Needed</h2>
-              <ul className="list-disc pl-6 space-y-2">
-                {project.improvementsNeeded.map((improvement, index) => (
-                  <li key={index}>{improvement}</li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          
-        </div>
-      </div>
+       
+      </motion.div>
     </div>
   );
 };
