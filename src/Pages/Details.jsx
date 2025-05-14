@@ -42,6 +42,7 @@ const Details = () => {
         "MongoDB",
       ],
       images: [
+        { src: "/CareMatrix Home.png", alt: "Project" },
         { src: "/careMatrix available bed.png", alt: "Project" },
         { src: "/careMtrix About us.png", alt: "Project" },
         { src: "/careMtrix appointment bokking.png", alt: "Project" },
@@ -56,7 +57,7 @@ const Details = () => {
         livePreview: "https://care-matrix.web.app/",
         github:
           "https://github.com/ssmahim01/Care-Matrix-With-Dev-Sync/tree/sayed-hub",
-        github:
+        github1:
           "https://github.com/ssmahim01/Care-Matrix-Backend/tree/sayed-hub",
       },
       keyFeatures: [
@@ -72,10 +73,21 @@ const Details = () => {
         "Purchase History Tracking: Stores and retrieves purchase history for patients, including invoice generation.",
       ],
       myContributions: [
-        "Patient Health Rewards System: Tracks patient activities (check-ups, medication adherence) and manages rewards.",
-        "Medicine Cart & Checkout: Manages cart operations, calculates costs, and processes medicine purchases.",
-        "Purchase History Tracking: Stores and retrieves purchase history for patients, including invoice generation.",
-      ],
+        "Logo: Created a beautiful logo and favicon for CareMatrix",
+        "About Us: Designed a Beautiful About Us section on Home Page",
+        "More About Us: Designed 2 beautiful section on clicking more about us button.",
+        "Our Hight Quality Service: Design a Beautiful our service section with a simple looking hover effect.",
+        "Blog & News: Designed a beautiful blog section showcasing dynamic blog data clicking read more you can read more about blog.",
+        "Blog Details Page: In this section users can see the details of specific blogs he clicks.",
+        "Our Available Beds: This section offers a user-friendly interface to book hospital rooms, displaying five room types with images, tariffs, and booking buttons, using Redux for data management.A pop-up form collects patient details, ensuring transparent pricing and a simplified booking process.",
+        "Receptionist Dashboard: It provides hospital receptionists with a comprehensive overview of appointments and bed bookings, featuring summary cards, pie charts, and detailed tables for key metrics, updated in real-time via API. Its clean, grid-based layout with a gray background ensures clarity and efficient management of hospital operations.",
+        "Manage Beds (Receptionist Dashboard): This section of the Receptionist Dashboard offers a clear interface to view and manage hospital bed listings, displaying images, titles, prices, and availability in a tabular format. It includes toggle switches for activating/deactivating beds, an action menu for edits or deletions, and an “Add New Bed” button for quick system updates.",
+        "Manage Bed Booking Requests(Receptionist Dashboard): This section allows administrators to review bed booking details, including bed type, price, patient info, and status, with visual pending indicators. The “Actions” menu enables quick acceptance or deletion, with timestamps aiding real-time workflow management.",
+        "Manage My Bed Booking Requests (Patient Dashboard):This section enables patients to view bed type, price, details, admission date, and status, with a yellow dot for pending requests. The 'Action' column offers a delete option, with timestamps (e.g., 'an hour ago') for efficient request tracking.",
+        "Billing & Payments (Administration Dashboard): The Billing & Payments section offers admins a searchable table to manage payment records with customer details, doctor info, amount, payment status, transaction ID, and appointment details for efficient management.",
+        "Manage Blogs(Administration Dashboard): This Section Allows Admin to view his added blog & news  information, Admin can add ,  delete or update blogs and by clicking add blogs button admin can add new blogs to the Blog & News Section",
+        "My Billing History (Doctor Dashboard):The My Billing History section of the Doctor Dashboard provides a searchable table with customer details, total amount, payment status, transaction ID, payment date, appointment details, and an Actions column for efficient billing management.",
+   ],
       challenges: [
         "Managing AI-based image generation for dynamic content visualization.",
         "Implementing a responsive sidebar with toggle functionality for mobile and tablet views.",
@@ -87,9 +99,11 @@ const Details = () => {
         "Limited customization options for participant profiles.",
       ],
       improvementsNeeded: [
-        "Enhance dynamic counts in tables to accurately display specific user data rows for organizers and participants.",
-        "Improve date and time input fields on the manage camp and add camp pages for better usability.",
-        "Add a role-based page to allow organizers to easily change participant roles or manage users.",
+        "Smart Wait-Time Prediction System: Integrate machine learning to improve the accuracy of real-time wait-time predictions by analyzing historical data and current hospital traffic patterns.",
+        "Chat-Activated Dashboard: Add end-to-end encryption and file-sharing size limits to enhance security and performance for doctor-pharmacist-patient communications.",
+        "Billing & Payment System: Implement multi-payment gateway support (e.g., PayPal, local options) to increase accessibility and flexibility for patients across regions.",
+        "Emergency Services Coordination: Introduce AI-driven triage prioritization and integration with external emergency services APIs for faster ambulance dispatch and coordination.",
+        "Patient Health Gamification & Rewards System: Expand the rewards system with personalized health challenges and integration with wearable devices to track real-time health metrics for points.",
       ],
       readme: "https://github.com/ssmahim01/Care-Matrix-With-Dev-Sync/blob/sayed-hub/README.md"
     },
@@ -130,7 +144,7 @@ const Details = () => {
       links: {
         livePreview: "https://post-pad.web.app/",
         github: "https://github.com/sayed725/PostPad-Client",
-        github: "https://github.com/sayed725/PostPad-Server",
+        github1: "https://github.com/sayed725/PostPad-Server",
       },
       features: {
         public: [
@@ -229,7 +243,7 @@ const Details = () => {
         "Add multi-language support for a more diverse user base.",
         "Optimize loading times for data-heavy sections of the app.",
       ],
-       readme: "https://github.com/ssmahim01/Care-Matrix-With-Dev-Sync/blob/sayed-hub/README.md"
+       readme: "https://github.com/sayed725/PostPad-Client/blob/main/README.md"
     },
     {
       id: 3,
@@ -262,7 +276,7 @@ const Details = () => {
       links: {
         livePreview: "https://a-11-bite-bank.web.app/",
         github: "https://github.com/sayed725/BiteBank-Client",
-        github: "https://github.com/sayed725/BiteBank-Server",
+        github1: "https://github.com/sayed725/BiteBank-Server",
       },
       keyFeatures: [
         "Beautiful slides showcasing top foods on the banner.",
@@ -311,7 +325,7 @@ const Details = () => {
       links: {
         livePreview: "https://assignment-10-b0e3a.web.app/",
         github: "https://github.com/sayed725/MovieLify-main-Client",
-        github: "https://github.com/sayed725/MovieLify-Server",
+        github1: "https://github.com/sayed725/MovieLify-Server",
       },
       keyFeatures: [
         "Beautiful slides showcasing top movies on the banner.",
@@ -325,7 +339,7 @@ const Details = () => {
         "Add multi-language support for a more diverse user base.",
         "Optimize loading times for data-heavy sections of the app.",
       ],
-       readme: "https://github.com/ssmahim01/Care-Matrix-With-Dev-Sync/blob/sayed-hub/README.md"
+       readme: "https://github.com/sayed725/MovieLify-main-Client/blob/main/README.md"
     },
     {
       id: 5,
@@ -353,6 +367,7 @@ const Details = () => {
       links: {
         livePreview: "https://assingment-10-5294b.web.app/",
         github: "https://github.com/sayed725/GREEN-EDVENTURES",
+        // github1: "https://github.com/sayed725/GREEN-EDVENTURES",
       },
       keyFeatures: [
         "Beautiful slides showcasing eco-adventures on the banner.",
@@ -366,7 +381,7 @@ const Details = () => {
         "Add multi-language support for a more diverse user base.",
         "Optimize loading times for data-heavy sections of the app.",
       ],
-       readme: "https://github.com/ssmahim01/Care-Matrix-With-Dev-Sync/blob/sayed-hub/README.md"
+       readme: "https://github.com/sayed725/GREEN-EDVENTURES/blob/main/README.md"
     },
     {
       id: 6,
@@ -387,7 +402,7 @@ const Details = () => {
         livePreview: "https://a8-gadget-heaven-725.netlify.app/",
         github: "https://github.com/sayed725/Gadget-Heaven",
       },
-       readme: "https://github.com/ssmahim01/Care-Matrix-With-Dev-Sync/blob/sayed-hub/README.md"
+       readme: "https://github.com/sayed725/Gadget-Heaven/blob/main/README.md"
     },
   ];
 
@@ -534,7 +549,7 @@ const Details = () => {
               <FaGithub size={18} /> GitHub Client
             </a>
             <a
-              href={project.links.github}
+              href={project.links.github1}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-900 text-white btn btn-sm sm:btn-md rounded-md sm:flex items-center gap-2 hover:bg-gray-700"
