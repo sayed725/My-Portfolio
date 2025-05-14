@@ -45,7 +45,7 @@ const Projects = () => {
     {
       id: 2,
       name: "PostPad",
-      homeImage: "/Postpad-Home.png",
+      homeImage: "/Post-pad Home-Dark.png",
       title:
         "A forum-building website enabling users to post, comment, vote, and share content in real-time.",
       description:
