@@ -7,7 +7,7 @@ const Projects = () => {
     {
       id: 1,
       name: "Care Matrix",
-      image: "/bitebank-1.jpeg",
+      image: "/CareMatrix Home.png",
       title:"A multi-role complete hospital management system for doctors, pharmacists, receptionist, administrators and patients.",
       description:
         "Care Matrix is a full-featured hospital management platform designed to streamline appointments, enhance internal communication, optimize pharmacy operations, and centralize admin controls for patients, doctors, pharmacists, receptionists and administrators. Care Matrix is a robust, role-based hospital management system developed by a 6-member team to revolutionize healthcare service delivery. As the team leader, I spearheaded the project’s architecture, task delegation, team collaboration, and contributed significantly to the frontend, backend, and dashboard development. The platform addresses key healthcare needs with the following major features: Streamlined Appointments - Patients can book, reschedule, or cancel appointments seamlessly, with a dynamic calendar view and real-time availability checks for doctors. Enhanced Internal Communication - I implemented a real-time chat system without socket.io, enabling secure messaging between patients, doctors, and pharmacists, with live data updates across roles using polling and TanStack Query. Optimized Pharmacy Operations - The pharmacy module includes inventory tracking, stock alerts, and order management, ensuring efficient medicine dispensing and restocking processes. Centralized Admin Controls - Admins can manage user roles, approve doctor applications, and oversee system analytics, with a custom workflow for role-based data access and approval requests. Additional contributions include designing a patient rewards system where users earn points for appointments and redeem them for discounts, and managing doctor data approval workflows to validate and integrate new doctors into the system. The project leverages a scalable tech stack, with MongoDB for data storage, Express.js for APIs, and React with Redux for a responsive UI.",
@@ -77,7 +77,7 @@ const Projects = () => {
     {
       id: 4,
       name: "Movielify",
-      image: "/Movielify-moviedetails.png",
+      image: "/Movielify Home.png",
       title:"A User-friendly website of exploring movies, viewing movie details, adding movies and deleting movies while managing user favorites.",
       description:
         "This is a user-friendly Movie Portal to simplify the process of exploring movies, viewing movie details, adding movies, and deleting movies while managing user favorites. This project includes a dynamic user interface, robust functionality, and seamless user experience.",
@@ -115,7 +115,7 @@ const Projects = () => {
     {
       id: 6,
       name: "Gadget Heaven",
-      image: "/bitebank-1.jpeg",
+      image: "/Gadjet Heaven Home.png",
       title:"A e-commerce website of showcasing tech products where User can view details of the product and would like to add to cart or watch list.",
       description:
         "The platform is shopping of accessories. From smart devices to the coolest accessories are available. The platform is the responsive website. In here, users can browse products also browse by categories. They can view details of the product and would like to add to cart or watch list.",

@@ -23,10 +23,10 @@ const NewProjectCard = ({ project }) => {
                 <h1 className="text-2xl font-bold text-white">
                   {project.name}
                 </h1>
-                <p className="text-white text-sm text-justify">
+                <p className="text-white text-sm text-justify mb-3">
                   {project.title}
                 </p>
-                <h2 className="font-semibold text-gray-900">Tech Stack</h2>
+                {/* <h2 className="font-semibold text-white mb-2">Tech Stack</h2> */}
                 <div className="flex flex-wrap gap-1">
                   {project.techStack.map((tech, index) => (
                     <span

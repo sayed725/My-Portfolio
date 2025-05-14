@@ -20,7 +20,7 @@ const HeroSection = () => {
           </h1>
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 sm:mt-4 lg:mt-4">
            A  
-             <span style={{ color: 'purple-700', fontWeight: 'semi-bold' }}>
+             <span style={{ color: '', fontWeight: 'semi-bold' }}>
           {/* Style will be inherited from the parent element */}
           <Typewriter
             words={[' Web Developer',' Front-end Developer',' MERN Stack Developer',' React.Js Developer']}

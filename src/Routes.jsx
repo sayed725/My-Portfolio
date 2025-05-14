@@ -8,6 +8,7 @@ import MovieLifyDetails from "./Pages/MovieLifyDetails";
 import PostPadDetails from "./Pages/PostPadDetails";
 import GreenDetails from "./Pages/GreenDetails";
 import BiteBankDetails from "./Pages/BiteBankDetails";
+import AllProjects from "./Pages/AllProjects";
 
 
 
@@ -20,6 +21,10 @@ import BiteBankDetails from "./Pages/BiteBankDetails";
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path:'projects',
+            element:<AllProjects></AllProjects>
         },
       
         {
