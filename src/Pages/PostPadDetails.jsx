@@ -5,17 +5,17 @@ const PostPadDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const technologies = [
-    "React",
-    "TailwindCSS",
-    "DaisyUI",
-    "React Hook Form",
-    "React Simple Star Rating",
-    "Firebase Authentication",
-    "MongoDB",
-    "Express.js",
-    "CORS",
-  ];
+  // const technologies = [
+  //   "React",
+  //   "TailwindCSS",
+  //   "DaisyUI",
+  //   "React Hook Form",
+  //   "React Simple Star Rating",
+  //   "Firebase Authentication",
+  //   "MongoDB",
+  //   "Express.js",
+  //   "CORS",
+  // ];
 
   return (
     <div className="min-h-screen bg-white text-gray-900 flex flex-col gap-10 py-10">

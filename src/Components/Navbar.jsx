@@ -2,13 +2,8 @@ import { NavLink, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
-
-  const location = useLocation()
-  console.log(location.pathname)
-
-
-
-
+  // const location = useLocation();
+  // console.log(location.pathname);
 
   const links = (
     <>

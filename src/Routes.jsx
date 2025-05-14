@@ -9,6 +9,7 @@ import PostPadDetails from "./Pages/PostPadDetails";
 import GreenDetails from "./Pages/GreenDetails";
 import BiteBankDetails from "./Pages/BiteBankDetails";
 import AllProjects from "./Pages/AllProjects";
+import Details from "./Pages/Details";
 
 
 
@@ -25,6 +26,10 @@ import AllProjects from "./Pages/AllProjects";
         {
             path:'projects',
             element:<AllProjects></AllProjects>
+        },
+        {
+            path:'/details/:id',
+            element:<Details></Details>
         },
       
         {

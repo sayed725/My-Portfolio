@@ -5,14 +5,15 @@ const NewProjectCard = ({ project }) => {
 
 
   return (
-    <Link to={`${project.id==2?'postpad-details':''}${project.id==3?'bitebank-details':''}${project.id==4?'/movielify-details':''}${project.id==5?'/green-details':''}`}
+    <Link to={`/details/${project.id}`}
+    //  to={`${project.id==2?'postpad-details':''}${project.id==3?'bitebank-details':''}${project.id==4?'/movielify-details':''}${project.id==5?'/green-details':''}`}
      className=" text-white">
       <div className="container mx-auto">
         <div className="">
           <div className="relative group overflow-hidden rounded-lg shadow-lg">
             {/* Movie Image */}
             <img
-              src={project.image}
+              src={project.homeImage}
               alt=""
               className="w-full h-[450px] group-hover:scale-110 filter brightness-90 object-cover  transition-transform  duration-500"
             />
