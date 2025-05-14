@@ -82,7 +82,7 @@ const HeroSection = () => {
               href="https://drive.google.com/file/d/1xUa-WkEOkaHclDsT4Jzo30v2lNWLIVLZ/view?usp=sharing"
               target="_blank"
             >
-              <button className="bg-purple-600 text-white btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-purple-700 flex items-center justify-center gap-2 w-full sm:w-auto">
+              <button className="bg-purple-600 text-white btn rounded-md font-semibold hover:bg-purple-700 flex items-center justify-center gap-2 w-full sm:w-auto">
                 Download Resume <FaDownload />
               </button>
             </a>
@@ -90,7 +90,7 @@ const HeroSection = () => {
             smooth={true} duration={700}
             >
            
-              <button className="border border-gray-800  btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-gray-800 hover:text-white w-full sm:w-auto">
+              <button className="border border-gray-800 btn rounded-md font-semibold hover:bg-gray-800 hover:text-white w-full sm:w-auto">
                 Browse Projects
               </button>
             </Link>

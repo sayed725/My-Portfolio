@@ -131,7 +131,7 @@ const ContactForm = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-purple-600 text-white btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-purple-700"
+              className="bg-purple-600 text-white btn rounded-md font-semibold hover:bg-purple-700"
             >
               SEND MESSAGE
             </button>

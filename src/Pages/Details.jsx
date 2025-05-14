@@ -259,7 +259,7 @@ const Details = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-white text-gray-900 flex flex-col gap-10 py-10">
+      <div className="min-h-screen w-11/12 mx-auto bg-white text-gray-900 flex flex-col gap-10 py-10">
         <div className="mx-auto py-6 px-2">
           <h1 className="text-5xl font-bold">Project Not Found</h1>
           <p className="mt-5">Sorry, the project with ID {id} could not be found.</p>
@@ -269,7 +269,9 @@ const Details = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 flex flex-col gap-10 py-10">
+    <div className="min-h-screen w-11/12 mx-auto bg-white text-gray-900 flex flex-col gap-10 py-10">
+
+        
       <div className="relative flex justify-center overflow-hidden">
         {project.images.map((image, index) => (
           <img
@@ -282,6 +284,29 @@ const Details = () => {
       </div>
 
       <div>
+
+        {project.links && (
+            <div className="mt-6 flex gap-4">
+              <a
+                href={project.links.livePreview}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600"
+              >
+                Live Preview
+              </a>
+              <a
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-900 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700"
+              >
+                <FaGithub size={18} /> GitHub Link
+              </a>
+            </div>
+          )}
+
+
         <div className="mx-auto py-6 px-2">
           <h1 className="text-5xl font-bold">{project.name}</h1>
           <p className="mt-5">{project.description}</p>
@@ -389,26 +414,7 @@ const Details = () => {
             </section>
           )}
 
-          {project.links && (
-            <div className="mt-6 flex gap-4">
-              <a
-                href={project.links.livePreview}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-purple-500 text-white px-6 py-2 rounded-lg hover:bg-purple-600"
-              >
-                Live Preview
-              </a>
-              <a
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-900 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-gray-700"
-              >
-                <FaGithub size={18} /> GitHub Link
-              </a>
-            </div>
-          )}
+          
         </div>
       </div>
     </div>

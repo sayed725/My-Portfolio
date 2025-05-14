@@ -1,58 +1,88 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { Links, NavLink, useLocation } from "react-router-dom";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
-  // const location = useLocation();
-  // console.log(location.pathname);
+  const location = useLocation();
 
   const links = (
     <>
-      <li>
-        <NavLink to="/" className="text-purple-600 hover:text-purple-600">
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <Link
-          to="about"
-          smooth={true}
-          duration={700}
-          className="hover:text-purple-700"
-        >
-          About
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="skills"
-          smooth={true}
-          duration={700}
-          className="hover:text-purple-700"
-        >
-          Skills
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="projects"
-          smooth={true}
-          duration={700}
-          className="hover:text-purple-700"
-        >
-          Projects
-        </Link>
-      </li>
+      {location.pathname === "/" ? (
+        <>
+          <li>
+            <NavLink to="/" className="text-purple-600 hover:text-purple-600">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={700}
+              className="hover:text-purple-700"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={700}
+              className="hover:text-purple-700"
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={700}
+              className="hover:text-purple-700"
+            >
+              Projects
+            </Link>
+          </li>
 
-      <li>
-        <Link
-          to="contact"
-          smooth={true}
-          duration={700}
-          className="hover:text-purple-700"
-        >
-          Contact
-        </Link>
-      </li>
+          <li>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={700}
+              className="hover:text-purple-700"
+            >
+              Contact
+            </Link>
+          </li>
+        </>
+      ) : (
+        <>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-purple-600 font-semibold"
+                  : "hover:text-purple-600"
+              }
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-purple-600 font-semibold"
+                  : "hover:text-purple-600"
+              }
+            >
+              Projects
+            </NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -64,7 +94,7 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn-sm btn sm:btn btn-ghost  lg:hidden"
+              className="btn btn-ghost rounded-md  lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -89,22 +119,34 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="text-xl sm:text-4xl font-bold text-purple-700">
+          <NavLink to={"/"}
+          className="text-xl sm:text-4xl font-bold text-purple-700">
             &lt;<span className="text-gray-900">Sayed</span>/&gt;
-          </div>
+          </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex gap-5 px-1 text-semibold">{links}</ul>
         </div>
         <div className="navbar-end lg:w-full">
-          <Link
-            to="contact"
-            smooth={true}
-            duration={700}
-            className="bg-purple-600 text-white btn btn-sm sm:btn-md rounded-lg font-semibold hover:bg-purple-700"
-          >
-            Hire Me
-          </Link>
+          {location.pathname === "/" ? (
+            <Link
+              to="contact"
+              smooth={true}
+              duration={700}
+              className="bg-purple-600 text-white btn rounded-md font-semibold hover:bg-purple-700"
+            >
+              Hire Me
+            </Link>
+          ) : (
+            <a
+              href="https://drive.google.com/file/d/1xUa-WkEOkaHclDsT4Jzo30v2lNWLIVLZ/view?usp=sharing"
+              target="_blank"
+            >
+              <button className="bg-purple-600 text-white btn rounded-md font-semibold hover:bg-purple-700 flex items-center justify-center gap-2 w-full sm:w-auto">
+                Download Resume
+              </button>
+            </a>
+          )}
         </div>
       </div>
     </div>
