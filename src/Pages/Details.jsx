@@ -424,7 +424,7 @@ const Details = () => {
   // Custom Arrow Components
   const NextArrow = ({ onClick }) => (
     <button
-      className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-md bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-all duration-300"
+      className="absolute right-2 top-1/2 -translate-y-1/2 z-5 w-6 h-6 rounded-md bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-all duration-300"
       onClick={onClick}
     >
       <svg
@@ -445,7 +445,7 @@ const Details = () => {
 
   const PrevArrow = ({ onClick }) => (
     <button
-      className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-purple-600 hover:bg-purple-700 rounded-md flex items-center justify-center transition-all duration-300"
+      className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-md bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition-all duration-300"
       onClick={onClick}
     >
       <svg
