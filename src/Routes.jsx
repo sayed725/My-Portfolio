@@ -2,12 +2,6 @@ import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "./MainLayout";
 import Home from "./Pages/Home";
 
-
-
-import MovieLifyDetails from "./Pages/MovieLifyDetails";
-import PostPadDetails from "./Pages/PostPadDetails";
-import GreenDetails from "./Pages/GreenDetails";
-import BiteBankDetails from "./Pages/BiteBankDetails";
 import AllProjects from "./Pages/AllProjects";
 import Details from "./Pages/Details";
 
@@ -30,23 +24,6 @@ import Details from "./Pages/Details";
         {
             path:'/details/:id',
             element:<Details></Details>
-        },
-      
-        {
-            path:'/movielify-details',
-            element: <MovieLifyDetails></MovieLifyDetails>
-        },
-        {
-            path:'/postpad-details',
-            element: <PostPadDetails></PostPadDetails>
-        },
-        {
-            path:'/green-details',
-            element: <GreenDetails></GreenDetails>
-        },
-        {
-            path:'/bitebank-details',
-            element: <BiteBankDetails></BiteBankDetails>
         },
       ]
     },
