@@ -320,7 +320,8 @@ const Projects = () => {
       improvementsNeeded: [
         "Improve detail page UI for a more interactive experience.",
         "Add multi-language support for a more diverse user base.",
-        "Optimize loading times for data-heavy sections of the app."
+        "Optimize loading times for data-heavy sections of the app.",
+        "Add a search bar to find products easily.",
       ],
     },
   ];
