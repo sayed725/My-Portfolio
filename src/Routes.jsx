@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 
 import AllProjects from "./Pages/AllProjects";
 import Details from "./Pages/Details";
+import Error from "./Pages/Error";
 
 
 
@@ -11,7 +12,7 @@ import Details from "./Pages/Details";
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-      errorElement: <h1 className="text-4xl text-center font-bold text-red-600">404 Not Found</h1>,
+      errorElement: <Error/>,
       children:[
         {
             path: '/',
