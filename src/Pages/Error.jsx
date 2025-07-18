@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Link } from "react-router";
 import { FiArrowLeft, FiHome, FiWifi, FiAlertTriangle } from "react-icons/fi";
 
